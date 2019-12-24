@@ -79,3 +79,7 @@ table tbody:first-of-type tr:nth-child(even) th,
 #table_index tbody:nth-of-type(even) th {
     background: #dfdfdf;
 }
+.homeImg{
+    width:20px;
+    height:20px;
+}

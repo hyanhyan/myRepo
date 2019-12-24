@@ -6,7 +6,9 @@
       "country": "USA",
       "city": "New York",
       "dateOfBirth": "01/10/1990",
-      "gender": "male"
+      "gender": "male",
+       "img":"img/update.jpg",
+       "image": "img/delete.jpg"
     },
     {
       "name": "Poghos",
@@ -14,7 +16,9 @@
       "country": "Armenia",
       "city": "Gyumri",
       "dateOfBirth": "12/11/1999",
-      "gender": "male"
+      "gender": "male",
+      "img":"img/update.jpg",
+      "image": "img/delete.jpg"
     },
     {
       "name": "John",
@@ -22,7 +26,9 @@
       "country": "England",
       "city": "London",
       "dateOfBirth": "01/10/1995",
-      "gender": "male"
+      "gender": "male",
+      "img":"img/update.jpg",
+      "image": "img/delete.jpg"
     }
   ]
 }
