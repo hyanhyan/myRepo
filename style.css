@@ -1,0 +1,81 @@
+body {
+    margin:0;
+    padding:0;
+}
+.project-tab {
+    width:100%;
+    height:auto;
+    border:1px solid #ccc;
+    box-shadow: 0 0 2px 2px #ccc;
+    padding: 10%;
+    margin-top: -8%;
+}
+.project-tab #tabs{
+    background: #007b5e;
+    color: #eee;
+}
+.project-tab #tabs h6.section-title{
+    color: #eee;
+}
+.project-tab #tabs .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    color: #0062cc;
+    background-color: transparent;
+    border-color: transparent transparent #f3f3f3;
+    border-bottom: 3px solid !important;
+    font-size: 16px;
+    font-weight: bold;
+}
+.project-tab .nav-link {
+    border: 1px solid transparent;
+    border-top-left-radius: .25rem;
+    border-top-right-radius: .25rem;
+    color: #0062cc;
+    font-size: 16px;
+    font-weight: 600;
+}
+.project-tab .nav-link:hover {
+    border: none;
+}
+.project-tab a{
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+}
+.btn-primary {
+    color: #212529;
+    background: #ddd linear-gradient(180deg, #e2e2e2, #ddd) repeat-x;
+    border-color: #ddd;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.15), 0 1px 1px rgba(0,0,0,.075);
+}
+table {
+    margin:0 auto;
+}
+thead {
+    display: flex;
+}
+thead tr{
+    font-weight:bold;
+    background:linear-gradient(#fff, #ccc);
+    width:62.5px;
+    display:flex;
+}
+thead tr{
+    width:5vw;
+}
+tbody{
+    flex-direction: column;
+    display:flex;
+}
+th{
+    background: linear-gradient(#fff, #ccc);
+}
+td {
+    width:5vw;
+    border:1px solid #ccc;
+}
+table tbody:first-of-type tr:nth-child(even),
+table tbody:first-of-type tr:nth-child(even) th,
+#table_index tbody:nth-of-type(even) tr,
+#table_index tbody:nth-of-type(even) th {
+    background: #dfdfdf;
+}
