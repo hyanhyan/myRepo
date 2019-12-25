@@ -164,10 +164,6 @@ function pushObj() {
                 alert("Cancelled")
             }
         }
-
-
-
-
     }
 
 
