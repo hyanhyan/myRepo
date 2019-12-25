@@ -43,21 +43,26 @@ $(document).ready(function () {
                 var td7 = document.createElement('td');
                 var update=document.createElement('img');
                 update.setAttribute('class','homeImg');
+                update.setAttribute('onclick',data.users[i].click);
                 update.src=data.users[i].img;
                 $(update).appendTo(td7);
                 $(td7).appendTo(tr1);
                 var td8 = document.createElement('td');
                 var del=document.createElement('img');
                 del.setAttribute('class','homeImg');
+                del.setAttribute('onclick',data.users[i].onclick);
                 del.src=data.users[i].image;
                 $(del).appendTo(td8);
                 $(td8).appendTo(tr1);
             }
             $(table).appendTo(usersTable);
         }
+
     });
 });
 
+
+/*var obj=JSON.parse(text);*/
 function pushObj() {
     let myNewObjElement = {
         "name": document.getElementById('name').value,
@@ -66,11 +71,11 @@ function pushObj() {
         "city": document.getElementById('city').value,
         "dateOfBirth": document.getElementById('date').value,
         "gender": document.getElementsByClassName('radio-inline').value,
-        "img":"img/s_host.png",
+        "img": "img/s_host.png",
     };
 
     var tbody = document.createElement('tbody');
-    for(let key in myNewObjElement) {
+    for (let key in myNewObjElement) {
         var tr1 = document.createElement('tr');
         $(tr1).appendTo(tbody);
         var td1 = document.createElement('td');
@@ -93,9 +98,21 @@ function pushObj() {
         $(td6).appendTo(tr1);
 
     }
-    var obj = JSON.parse(users);
-    obj['users'].push(myNewObjElement);
-    users = JSON.stringify(obj);
-    users.push(myNewObjElement);
-    console.log(users);
+    /*obj.push(myNewObjElement);
+    console.log(obj);*/
 }
+
+
+
+
+   /* var obj = JSON.parse(users);
+    obj['users'].push(myNewObjElement);*/
+
+    function myFunc(x) {
+        if (x === 1) {
+            console.log("ghh");
+        } else if (x === 2) {
+            console.log("ghiyh");
+        }
+    }
+
