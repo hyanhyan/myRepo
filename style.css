@@ -48,7 +48,7 @@ body {
     box-shadow: inset 0 1px 0 rgba(255,255,255,.15), 0 1px 1px rgba(0,0,0,.075);
 }
 table {
-    margin:0 auto;
+
 }
 thead {
     display: flex;
@@ -56,11 +56,11 @@ thead {
 thead tr{
     font-weight:bold;
     background:linear-gradient(#fff, #ccc);
-    width:62.5px;
+    width:40px;
     display:flex;
 }
 thead tr{
-    width:5vw;
+    width:4.5vw;
 }
 tbody{
     flex-direction: column;
@@ -70,7 +70,7 @@ th{
     background: linear-gradient(#fff, #ccc);
 }
 td {
-    width:5vw;
+    width:4.5vw;
     border:1px solid #ccc;
 }
 table tbody:first-of-type tr:nth-child(even),
