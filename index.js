@@ -1,6 +1,6 @@
 var usersTable = document.getElementById('nav-profile');
 var theadArr = ['name', 'surname', 'country', 'city', 'birthday', 'gender', '', ''];
-var text = $(document).ready(function () {
+$(document).ready(function () {
     $.ajax({
         url: "json/users.json",
         dataType: "json",
@@ -45,6 +45,7 @@ var text = $(document).ready(function () {
                 $(td6).text(data.users[i].gender);
                 $(td6).appendTo(tr1);
                 var td7 = document.createElement('td');
+                td7.setAttribute('id', 'info');
                 var update = document.createElement('img');
                 update.setAttribute('class', 'homeImg');
                 update.setAttribute('onclick', data.users[i].click);
@@ -52,7 +53,9 @@ var text = $(document).ready(function () {
                 $(update).appendTo(td7);
                 $(td7).appendTo(tr1);
                 var td8 = document.createElement('td');
+                td8.setAttribute('id', 'all');
                 var del = document.createElement('img');
+                del.setAttribute('id', 'alll');
                 del.setAttribute('class', 'homeImg');
                 del.setAttribute('onclick', data.users[i].onclick);
                 del.src = data.users[i].image;
@@ -90,75 +93,81 @@ function pushObj() {
         "gender": $('#gen:checked').value,
         "img": "img/update.jpg",
         "image": "img/delete.jpg",
+        "click": "myFunc(1)",
+        "onclick": "myFunc(2)"
     };
+        var tb = document.getElementById("tbodyold");
+        var tbody = document.createElement('tbody');
+        tb.appendChild(tbody);
+        var tr1 = document.createElement('tr');
+        tbody.appendChild(tr1);
+        var td1 = document.createElement('td');
+        $(td1).text(myNewObjElement.name);
+        $(td1).appendTo(tr1);
 
-    var tb = document.getElementById("tbodyold");
-    var tbody = document.createElement('tbody');
-    tb.appendChild(tbody);
-    var tr1 = document.createElement('tr');
-    tbody.appendChild(tr1);
+        var td2 = document.createElement('td');
+        $(td2).text(myNewObjElement.surname);
+        $(td2).appendTo(tr1);
+
+        var td3 = document.createElement('td');
+        $(td3).text(myNewObjElement.country);
+        $(td3).appendTo(tr1);
+
+        var td4 = document.createElement('td');
+        $(td4).text(myNewObjElement.city);
+        $(td4).appendTo(tr1);
+
+        var td5 = document.createElement('td');
+        $(td5).text(myNewObjElement.dateOfBirth);
+        $(td5).appendTo(tr1);
+
+        var td6 = document.createElement('td');
+        $(td6).text(myNewObjElement.gender);
+        $(td6).appendTo(tr1);
+
+        var td7 = document.createElement('td');
+        var update = document.createElement('img');
+        update.setAttribute('class', 'homeImg');
+        update.setAttribute('click', myNewObjElement.click);
+        update.src = myNewObjElement.img;
+        $(update).appendTo(td7);
+        $(td7).appendTo(tr1);
+
+        var td8 = document.createElement('td');
+        var del = document.createElement('img');
+        del.setAttribute('class', 'homeImg');
+        del.src = myNewObjElement.image;
+        del.setAttribute('click', myNewObjElement.onclick);
+        $(del).appendTo(td8);
+        $(td8).appendTo(tr1);
+
+        txt.push(myNewObjElement);
+        console.log(txt);
+        document.getElementById('name').value = "";
+        document.getElementById('surname').value = "";
+        document.getElementById('country').value = "";
+        document.getElementById('city').value = "";
+        document.getElementById('date').value = "";
 
 
-
-    var td1 = document.createElement('td');
-    td1.innerHTML = document.getElementById('name').value;
-    $(td1).appendTo(tr1);
-    var td2 = document.createElement('td');
-    $(td2).text(myNewObjElement.surname);
-    $(td2).appendTo(tr1);
-    var td3 = document.createElement('td');
-    $(td3).text(myNewObjElement.country);
-    $(td3).appendTo(tr1);
-    var td4 = document.createElement('td');
-    $(td4).text(myNewObjElement.city);
-    $(td4).appendTo(tr1);
-    var td5 = document.createElement('td');
-    $(td5).text(myNewObjElement.dateOfBirth);
-    $(td5).appendTo(tr1);
-    var td6 = document.createElement('td');
-    $(td6).text(myNewObjElement.gender);
-    $(td6).text(myNewObjElement.genderr);
-    $(td6).appendTo(tr1);
-    var td7 = document.createElement('td');
-    var update = document.createElement('img');
-    update.setAttribute('class', 'homeImg');
-    update.setAttribute('click',txt.click);
-    update.src = myNewObjElement.img;
-    $(update).appendTo(td7);
-    $(td7).appendTo(tr1);
-    var td8 = document.createElement('td');
-    var del = document.createElement('img');
-    del.setAttribute('class', 'homeImg');
-    del.setAttribute('click',txt.onclick);
-    del.src = myNewObjElement.image;
-    $(del).appendTo(td8);
-    $(td8).appendTo(tr1);
-    txt.push(myNewObjElement);
-    console.log(txt);
-    document.getElementById('name').value="";
-    document.getElementById('surname').value="";
-    document.getElementById('country').value="";
-    document.getElementById('city').value="";
-    document.getElementById('date').value="";
 }
 
 
     function myFunc(x) {
-
         if (x === 1) {
-            console.log('rere');
-
+            console.log("trtr");
         } else if (x === 2) {
-            $('#info').click(function () {
-                var result = confirm("Do you want to delete this row?");
-                if (result === true) {
-                    $(this).closest('tr').remove();
-                } else {
-                    alert("Cancelled")
-                }
-            });
+            var result = confirm("Do you want to delete this row?");
+            if (result === true) {
+                document.getElementById('info').remove();
+            } else {
+                alert("Cancelled")
+            }
         }
 
-}
+
+
+
+    }
 
 
