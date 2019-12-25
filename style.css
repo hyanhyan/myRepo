@@ -1,21 +1,29 @@
 body {
     margin:0;
     padding:0;
+    box-sizing: border-box;
 }
 .project-tab {
-    width:100%;
+    width:80vw;
     height:auto;
     border:1px solid #ccc;
     box-shadow: 0 0 2px 2px #ccc;
     padding: 10%;
-    margin-top: -8%;
+    margin:0 auto;
+
+}
+#nav-profile{
+    margin:0 auto;
+    height: auto;
 }
 .project-tab #tabs{
-    background: #007b5e;
     color: #eee;
 }
 .project-tab #tabs h6.section-title{
     color: #eee;
+}
+#tabs {
+    height: auto;
 }
 .project-tab #tabs .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
     color: #0062cc;
@@ -48,36 +56,48 @@ body {
     box-shadow: inset 0 1px 0 rgba(255,255,255,.15), 0 1px 1px rgba(0,0,0,.075);
 }
 table {
-
+    width:50vw;
+    margin:0 auto;
 }
 thead {
+    width:70%;
     display: flex;
+    flex-direction: row;
 }
 thead tr{
     font-weight:bold;
     background:linear-gradient(#fff, #ccc);
-    width:40px;
     display:flex;
 }
 thead tr{
-    width:4.5vw;
+    width:12.5%;
 }
 tbody{
+    width:40vw;
+    flex-direction: column;
+    display:flex;
+}
+#tbodyold{
+    width:70%;
     flex-direction: column;
     display:flex;
 }
 th{
     background: linear-gradient(#fff, #ccc);
 }
+#tbodyold tr{
+    width:100%;
+}
 td {
-    width:4.5vw;
+    width:12.5%;
     border:1px solid #ccc;
 }
+table tbody:first-of-type tr:nth-child(even) ,
 table tbody:first-of-type tr:nth-child(even),
-table tbody:first-of-type tr:nth-child(even) th,
 #table_index tbody:nth-of-type(even) tr,
-#table_index tbody:nth-of-type(even) th {
+#table_index tbody:nth-of-type(even){
     background: #dfdfdf;
+    width:100%;
 }
 .homeImg{
     width:20px;
