@@ -7,10 +7,10 @@
       "city": "New York",
       "dateOfBirth": "01/10/1990",
       "gender": "male",
-       "img":"img/update.jpg",
-       "image": "img/delete.jpg",
-       "click": "myFunc(1)",
-       "onclick": "myFunc(2)"
+      "img":"img/update.jpg",
+      "image": "img/delete.jpg",
+      "click": "myFunc(1, this)",
+      "onclick": "myFunc(2, this)"
 
     },
     {
@@ -22,8 +22,8 @@
       "gender": "male",
       "img":"img/update.jpg",
       "image": "img/delete.jpg",
-      "click": "myFunc(1)",
-      "onclick": "myFunc(2)"
+      "click": "myFunc(1, this)",
+      "onclick": "myFunc(2, this)"
     },
     {
       "name": "John",
@@ -34,18 +34,11 @@
       "gender": "male",
       "img":"img/update.jpg",
       "image": "img/delete.jpg",
-      "click": "myFunc(1)",
-      "onclick": "myFunc(2)"
+      "click": "myFunc(1, this)",
+      "onclick": "myFunc(2, this)"
     }
   ]
 }
-
-
-
-
-
-
-
 
 
 
