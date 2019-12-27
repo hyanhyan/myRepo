@@ -25,34 +25,54 @@
                         <form action="#">
                             <div class="form-group">
                                 <label for="name" class="control-label">Name</label>
-                                <input type="text" class="form-control" id="name" placeholder="Name">
+                                <input type="text" class="form-control" id="name"  placeholder="Name">
                             </div>
                             <div class="form-group">
                                 <label for="surname" class="control-label">Surname</label>
-                                <input type="text" class="form-control" id="surname" placeholder="Surname">
+                                <input type="text" class="form-control" id="surname"  placeholder="Surname">
                             </div>
                             <div class="form-group">
                                 <label for="country" class="control-label">Country</label>
-                                <input type="text" class="form-control" id="country" placeholder="Your country">
+                                <input type="text" class="form-control" id="country"  placeholder="Your country">
                             </div>
                             <div class="form-group">
                                 <label for="city" class="control-label">City</label>
-                                <input type="text" class="form-control" id="city" placeholder="Your city">
+                                <input type="text" class="form-control" id="city"  placeholder="Your city">
                             </div>
                             <div class="form-group">
-                                <label for="country" class="control-label">Gender</label>
-                                <label class="radio-inline"><input type="radio" class="gen" name="gender" value="">Female</label>
-                                <label class="radio-inline"><input type="radio" class="gen" name="gender" value="">Male</label>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="gender" id="male" value="male">
+                                    <label class="form-check-label" for="male">Male</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="gender" id="female" value="female">
+                                    <label class="form-check-label" for="female">Female</label>
+                                </div>
                             </div>
                             <div class="form-group">
                                 <label>Birthday</label>
-                                <input type="date" name="bday" max="3000-12-31"
-                                       min="1000-01-01" class="form-control" id="date">
+                                <input type="date" class="form-control" id="date">
                             </div>
-                            <button type="submit" class="btn btn-primary" onclick="pushObj()">Submit</button>
+                            <button type="submit" class="btn btn-primary" id="submit_button" onclick="pushObj()">Submit</button>
                         </form>
                     </div>
                     <div class="tab-pane fade w-100 d-flex" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                        <table class="table" id="users_table">
+                            <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Surname</th>
+                                <th scope="col">Country</th>
+                                <th scope="col">City</th>
+                                <th scope="col">Date of Birth</th>
+                                <th scope="col">Gender</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+
+                            </tbody>
+                        </table>
                     </div>
 
                 </div>
