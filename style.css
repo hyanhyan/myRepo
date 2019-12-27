@@ -106,6 +106,9 @@ a {
 /*    background: #dfdfdf;*/
 /*    width:60%;*/
 /*}*/
+select.error, textarea.error, input.error {
+    color:#FF0000;
+}
 .homeImg{
     width:20px;
     height:20px;
